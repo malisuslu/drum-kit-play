@@ -14,7 +14,7 @@ let k = "crash";
 let l = "kick-bass";
 
 onkeydown = function(e) { 
-    aud(eval(e.key));
+    aud(eval(e.key.toLowerCase()));
     let doc_class = document.querySelector(`.${e.key}`).classList;
     doc_class.add("pressed");
     setTimeout(function() {
